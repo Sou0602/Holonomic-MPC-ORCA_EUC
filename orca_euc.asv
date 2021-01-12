@@ -1,0 +1,19 @@
+function [c,ceq] = orca_euc(pos_store,vel_store,N,dt,u,r)
+c = [];
+ceq = [];
+
+for i = 1:length(pos_store)
+    agent_pos = pos_store(i,1:2);
+    obs_pos = pos_store(i,3:4);
+    j = vel_store(i,1);
+    obs_vel = vel_store(i,2:3);
+
+    opos = obs_pos + obs_vel * dt;
+
+
+
+c(end+1) = - (((agent_pos(1) + u(j) - op)^2 + (   )^2)^0.5 - 4*r)
+
+end
+
+end
